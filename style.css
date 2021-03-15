@@ -1,0 +1,530 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* CSS Variables */
+
+:root {
+    --navbar-height: 59px;
+}
+
+
+/* Navigation Bar */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.7;
+}
+
+
+/* Navigation Bar: Logo and Image */
+
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 60px;
+    margin: 0px 0px;
+    filter: invert(100%);
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.7rem;
+    margin-bottom: -15px;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 5px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+
+/* Home Section */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('img/roadbike.jpeg') no-repeat center center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: rgb(500 909 -980);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    height: 250px;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+/* MAIN */
+
+.main {
+    background: #ffffff;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient( #f2f2f2, #ffffff);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #f2f2f2, #ffffff);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #f2f2f2, #ffffff);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #f2f2f2, #ffffff);
+    /* Standard syntax (must be last) */
+}
+
+.main .col-sm-2 {
+    display: block;
+}
+
+.main .goUpButton :nth-child(1) {
+    padding-top: 10%;
+    margin-bottom: -12px;
+}
+
+#slide {
+    padding: 0px;
+}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    width: 100%;
+    margin: auto;
+}
+
+#myCarousel {
+    z-index: 0;
+}
+
+a.goUpButton {
+    display: none;
+    width: 40px;
+    height: 40px;
+    color: black;
+    position: fixed;
+    margin: auto;
+    right: 5%;
+    bottom: 15%;
+    z-index: 3;
+    background: rgba(128, 128, 128, 0.6);
+    box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.5), 0 3px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+a:hover.goUpButton {
+    background: #009933;
+    color: white;
+}
+
+
+/*To not see any shadow on the sides, the (absolute value of the) spread radius (4th parameter) needs to be the same as the blur radius (3rd parameter).*/
+
+.animCircles {
+    display: flex;
+    padding-left: 0px;
+}
+
+.animCircles li {
+    display: inline;
+    margin: auto;
+}
+
+.GaugeMeter {
+    margin-right: 0px;
+}
+
+
+/* Services Section */
+
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* Clients Section */
+
+#client-section {
+    position: relative;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1.3;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 50px;
+    width: 100px;
+}
+
+
+/* Contact Section */
+
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('img/contact.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+
+/* Utility Classes */
+
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: -2px;
+    color: bisque;
+}
+
+
+/* .h1-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+} */
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.cente {
+    text-align: center;
+    color: #000000;
+}
+
+#socialMedia {
+    position: relative;
+}
+
+#socialMedia::before {
+    content: "";
+    position: absolute;
+    background-color: #f60;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1.3;
+}
+
+#socialRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-item {
+    padding: 34px;
+}
+
+#socialRow img {
+    height: 30px;
+    width: 50px;
+    margin-left: 50px;
+}
+
+
+/*-----------------------footer--------------------*/
+
+footer {
+    font-size: 12px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    margin-top: 0px;
+}
+
+#foot {
+    padding: 0px 0px 0px 0px;
+}
+
+
+/* g37unt */
+
+#siteMap,
+#brands,
+#contactInfo {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+#siteMap h5,
+#brands h5,
+#contactInfo h5 {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#siteMap a,
+#brands a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 4px solid rgba(192, 192, 192, 0);
+    -webkit-transition: border 500ms ease;
+    -moz-transition: border 500ms ease;
+    -ms-transition: border 500ms ease;
+    -o-transition: border 500ms ease;
+    transition: border 500ms ease;
+}
+
+#siteMap a:link,
+#brands a:link {
+    color: #fff;
+}
+
+#Home:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Price list:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Book a bike:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Contact:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Honda:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Kawasaki:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Suzuki:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Yamaha:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Tvs:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#Ktm:hover {
+    border-bottom: 4px solid rgba(84, 220, 48, 1.0);
+}
+
+#socialRow {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: #000000;
+}
+
+#socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+}
+
+#facebook {
+    background-color: #000000;
+}
+
+#google {
+    background-color: #000000;
+}
+
+#linkedin {
+    background-color: #000000;
+}
+
+#skype {
+    background-color: #000000;
+}
+
+#whatsapp {
+    background-color: #000000;
+}
+
+#twitter {
+    background-color: #000000;
+}
+
+footer li img {
+    width: 30px;
+}
+
+footer #map {
+    z-index: 5;
+}
+
+#rights {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: rgb(251, 255, 4);
+    background-color: #333333;
+    padding: 0px;
+    text-align: center;
+}
+
+#rights a {
+    color: white;
+}
